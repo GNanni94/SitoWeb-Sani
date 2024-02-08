@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titolo %} Contatti {% endblock titolo %}
+
+{% block contenuto %}
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-6">
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+              
+        </div>    
+
+
+        <div class="col-3 ">
+
+            <table class="mx-5 text-center table table-bordered">
+                <thead class="text-center">
+                    <h3 class="text-center">Orari di apertura</h3>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Lunedi</th>
+                    <td>8.00-12.00 / 13.45-17.45</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Martedi</th>
+                    <td>8.00-12.00 / 13.45-17.45</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Mercoledi</th>
+                    <td colspan="2">8.00-12.00 / 13.45-17.45</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Giovedi</th>
+                    <td colspan="2">8.00-12.00 / 13.45-17.45</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Venerdi</th>
+                    <td colspan="2">8.00-12.00 / 13.45-17.45</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Sabato</th>
+                    <td colspan="2">Chiuso</td>  
+                  </tr>
+                  <tr>
+                    <th scope="row">Domenica</th>
+                    <td colspan="2">Chiuso</td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </div>    
+
+        <div class="col-12">
+
+        </div>    
+
+
+    </div>    
+
+</div>    
+
+
+{% endblock contenuto %}
