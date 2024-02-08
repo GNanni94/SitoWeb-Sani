@@ -1,19 +1,15 @@
-from django.db.models import Q
-from django.shortcuts import render
+
 from .models import Categoria
-from django.views.generic import ListView, DetailView
-from typing import Any, Dict
-from django.http import HttpRequest, HttpResponse
+from django.shortcuts import render
+from django.template import loader
+from django.http import HttpResponse
+
 
 # Create your views here.
 
 
-class CategoriaListView(ListView):
-    model=Categoria
-    template_name = "home.html"
 
-
-def categorie(request):
-    return {
-        'categoria': Categoria.objects.all()
-    }
+def categoria_home(request):
+   return {
+       'categoria': Categoria.objects.all()
+   }

@@ -68,10 +68,9 @@
             Catalogo
           </a>
           <ul class="dropdown-menu" id="dropdownCategorie">
-    
-        							
-            <li><a class="dropdown-item fs-6" href="#">Pippo</a></li>
-         
+            {% for lista in categoria %}
+              <li><a class="dropdown-item fs-6" href="#">{{lista.nome_categoria}}</a></li>
+            {% endfor %}
             						
           </ul>
         </li>

@@ -32,9 +32,7 @@ class Categoria(models.Model):
     def __str__ (self):
         return self.immagine_categortia.url + " "+str(self.pk) +" " + self.nome_categoria 
 
-    def get_absolute_url(self):
-       return reverse("dettaglio_categoria", kwargs={"pk": self.pk})
-
+   
     class Meta:
         db_table="Categoria"
         verbose_name = "Categoria"
