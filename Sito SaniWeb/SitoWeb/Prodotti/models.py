@@ -26,11 +26,11 @@ class Articolo(models.Model):
 
 class Categoria(models.Model):
     nome_categoria=models.CharField(max_length=30, blank=True)
-    immagine_categortia = models.ImageField(upload_to='immagini_categoria/', default ="logo/saniscope_logo 2.png")
+    immagine_categoria = models.ImageField(upload_to='immagini_categoria/', default ="logo/saniscope_logo 2.png")
     
 
     def __str__ (self):
-        return self.immagine_categortia.url + " "+str(self.pk) +" " + self.nome_categoria 
+        return self.immagine_categoria.url + " "+str(self.pk) +" " + self.nome_categoria 
 
    
     class Meta:

@@ -8,16 +8,27 @@
 <section>
 
 	<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-		<div class="col" >
-			<a class="dropdown-item fs-6" href="#">
-				<div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
-					<div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-						<h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" ></h3>
-
+		{% for categoria in lista_categoria %}
+		<div class=" col-md-6 col-lg-6 col-xl-6 col-xxl-4 my-4">
+		
+			<div class="card text-bg-dark " style="width:29rem; height:28rem;" id="home_contenitore_immagineCategorie">
+				<a href="{% url 'dettaglio_categoria' categoria.pk %}">
+					<img src="{{ categoria.immagine_categoria.url }}" class="card-img view" alt="..."
+						style=" min-width: 29rem; min-height:28rem; max-width: 29rem; max-height:28rem; "
+						id="home_immaginiCategorie">
+					<div class="mask align-items-center">
+						<div class="d-flex justify-content-center align-items-center h-100">
+							<h5 class="card-title text-light display-6 fw-bold">{{ categoria.nome_categoria }}</h5>
+		
+						</div>
 					</div>
-				</div>
-			</a>
+				</a>
+		
+			</div>
+		
 		</div>
+		
+		{% endfor %}
 	</div>
 
 
