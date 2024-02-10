@@ -9,12 +9,12 @@
 
 	<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
 		{% for categoria in lista_categoria %}
-		<div class=" col-md-6 col-lg-6 col-xl-6 col-xxl-4 my-4">
+		<div class=" col-md-6 col-lg-5 col-xl-4 col-xxl-4 my-4">
 		
-			<div class="card text-bg-dark " style="width:29rem; height:28rem;" id="home_contenitore_immagineCategorie">
-				<a href="{% url 'dettaglio_categoria' categoria.pk %}">
+			<div class="card text-bg-dark " style="width:25rem; height:24rem;" id="home_contenitore_immagineCategorie">
+				<a href="{% url 'dettaglio_categoria' categoria.nome_categoria %}">
 					<img src="{{ categoria.immagine_categoria.url }}" class="card-img view" alt="..."
-						style=" min-width: 29rem; min-height:28rem; max-width: 29rem; max-height:28rem; "
+						style=" min-width: 25rem; min-height:24rem; max-width: 25rem; max-height:24rem; "
 						id="home_immaginiCategorie">
 					<div class="mask align-items-center">
 						<div class="d-flex justify-content-center align-items-center h-100">

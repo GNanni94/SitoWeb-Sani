@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block titolo %} {{nome_categoria}} {% endblock titolo %}
+
+
+{% block contenuto %}
+
+
+<div class="row">
+
+    <div class="col-3">
+
+    </div>
+
+    <div class="col-9">
+
+        <div class="row">
+
+            <div class="col-12 text-center py-5" >
+                <h1 class="fw-bold">{{nome_categoria}}</h1>
+            </div>
+
+            <div class="col py-3 px-3" >
+
+                <div class="card" style="width: 18rem;">
+                    <img src="" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text"></p>
+                        <h6 class="card-title"></h6>
+
+                    </div>
+                    
+                    <div class="card-footer">
+
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <button class="btn btn-success" th:src="${prodotto.listaSchedaTecnica}"><small>Scheda Tecnica</small></button>
+                            </div>
+                        </div>
+                    </div>		
+                    <div class="card-footer">
+
+                        <div class="row">
+                    
+                            <div class="col-5">
+
+                                <div class="d-flex flex-row">
+                                    <button class="btn btn-link px-2"
+                                        >
+                                        <i class="bi bi-dash"></i>
+                                    </button>
+
+                                    <input id="form1" min="0" name="quantity" value="2" type="number"
+                                        class="form-control form-control-sm" style="width: 45px;">
+
+                                    <button class="btn btn-link px-2"
+                                       >
+                                        <i class="bi bi-plus"></i>
+                                    </button>
+                                </div>
+
+
+                            </div> 
+                            <div class="col-7">
+                                <button class="btn btn-primary" style="float: right;" ><small>Aggiungi </small><i class="bi bi-cart text-dark"></i></button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}
